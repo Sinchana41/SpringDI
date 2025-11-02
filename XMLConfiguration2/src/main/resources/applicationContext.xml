@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Engine bean -->
+    <bean id="engine" class="com.example.springdi.Engine">
+        <property name="model" value="V8-2025"/>
+        <property name="horsePower" value="400"/>
+    </bean>
+
+    <!-- Car bean -->
+    <bean id="car" class="com.example.springdi.Car">
+        <property name="engine" ref="engine"/>
+        <property name="color" value="Red"/>
+    </bean>
+
+</beans>
